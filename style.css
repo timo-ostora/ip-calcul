@@ -1,0 +1,207 @@
+:root {
+  --yellow-color: #ffc700;
+  --orange-color: #fb6d48;
+  --pink-color: #d74b76;
+  --purpel-color: #673f69;
+  --dark-blue: #070f2b;
+  --teal-color: #007f73;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+nav {
+  position: relative;
+  z-index: 1000;
+  padding: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .logo {
+  width: 70px;
+  & img {
+    max-width: 100%;
+  }
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+nav li {
+  transition: 300ms;
+  font-weight: 500;
+  position: relative;
+  &:hover {
+    color: var(--yellow-color);
+  }
+}
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 20px 8%;
+}
+.landing video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.landing .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000099;
+  z-index: 1;
+}
+.landing .headLine {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  text-align: center;
+}
+.landing .headLine h1 {
+  font-size: 52px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  & span {
+    color: var(--teal-color);
+  }
+  & span:last-child {
+    color: var(--yellow-color);
+  }
+}
+
+.landing .btn {
+  padding: 10px 20px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  background-color: var(--teal-color);
+  border-radius: 10px;
+  box-shadow: 0 2px 2px white;
+  position: absolute;
+  color: white;
+  z-index: 1000;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -20px);
+}
+section {
+  padding: 40px 8%;
+}
+.titel h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+.capabilities .content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.capabilities .content > div {
+  text-align: center;
+  border: 1px solid var(--yellow-color);
+  padding: 20px;
+}
+
+.capabilities .icon i {
+  font-size: 34px;
+  color: var(--teal-color);
+  margin-bottom: 20px;
+}
+
+.capabilities h3 {
+  font-weight: bold;
+  font-size: 24px;
+  color: black;
+  margin-bottom: 20px;
+}
+.capabilities .content p {
+  color: #777;
+  line-height: 1.5;
+}
+.ip-calcul {
+  background-color: var(--teal-color);
+  color: white;
+}
+.ip-calcul .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.ip-calcul form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 5px;
+  border: 2px solid var(--yellow-color);
+}
+.ip-calcul label {
+  font-size: 18px;
+  font-weight: bold;
+}
+.ip-calcul input[type="text"] {
+  margin-bottom: 20px;
+  background-color: white;
+  color: black;
+  &::placeholder {
+    color: gray;
+  }
+  &:focus-visible {
+    outline: none;
+  }
+}
+.ip-calcul input {
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  background: var(--yellow-color);
+  font-size: 16px;
+  font-weight: 600;
+}
+.ip-calcul .output {
+  border: 1px solid var(--yellow-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 5px;
+}
+.ip-calcul .output p {
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  & span {
+    color: var(--yellow-color);
+    float: right;
+  }
+}
